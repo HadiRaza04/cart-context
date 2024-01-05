@@ -1,5 +1,7 @@
 # <a href="https://cartcontext04.netlify.app/">React and Context API Project</a>
 
+![Project Image](https://github.com/HadiRaza04/cart-context/blob/master/cart.png?raw=true)
+
 ## Project Overview
 
 In this project, I make an API fetch call at the below URL to get product data and display it on the web page.
