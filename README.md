@@ -2,23 +2,23 @@
 
 ## Project Overview
 
-In this project I make a api fetch call at below url to get products data and display to the web page.
+In this project, I make an API fetch call at the below URL to get product data and display it on the web page.
 ```
 https://dummyjson.com/products
 ```
-You can easily add products to your cart and view total bill at bottom of the cart. You can remove products from cart as well.
+You can easily add products to your cart and view the total bill at the bottom of the cart. You can remove products from the cart as well.
 
 ## Steps to run this project on your local machine
 
-1. Clone this repository on your local machine.<br>Note: For cloning the repository, You have to installed git in your machine. You can download git from here <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>. And configure your "username" and "email".<br> Run this command 
+1. Clone this repository on your local machine.<br>Note: For cloning the repository, You have to install git on your machine. You can download git from here <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>. And configure your "username" and "email".<br> Run this command 
 ```
 git clone "https://github.com/HadiRaza04/cart-context.git"
 ```
-2. Then open command prompt OR powershell and run this below command and hit enter. <br> Note: You have to installed Node JS in your machine for run this command. You can download Node JS from here <a href="https://nodejs.org/en/download/current">https://nodejs.org/en/download/current</a>
+2. Then open the command prompt OR Powershell run this below command and hit enter. <br> Note: You have to install Node JS on your machine to run this command. You can download Node JS from here <a href="https://nodejs.org/en/download/current">https://nodejs.org/en/download/current</a>.
 ```
 npm install
 ```
-3. In the last step you have to run script dev command to run the project.
+3. In the last step you have to run the script dev command to run the project.
 ```
 npm run dev
 ```
