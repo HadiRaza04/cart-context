@@ -1,14 +1,37 @@
 import React, { useEffect, useState, useContext } from 'react'
+import { useQuery } from '@tanstack/react-query';
 import { CartContext } from '../context/cart';
 import './products.css'
+import spinner from'../assets/icons8-loading-circle.gif'
+
 const Products = () => {
-    const [data, setData] = useState([]);
+    // const [data, setData] = useState([]);
+    // useEffect(() => {
+        //     fetch("https://dummyjson.com/products")
+        //     .then(res => res.json())
+        //     .then(res => setData(res.products))
+        // }, [])
+        
     const cart = useContext(CartContext);
-    useEffect(() => {
-        fetch("https://dummyjson.com/products")
-        .then(res => res.json())
-        .then(res => setData(res.products))
-    }, [])
+    const getProducts = async () => {
+        const res = await fetch("https://dummyjson.com/products");
+        const data = await res.json();
+        return data.products;
+    }
+    
+    const {
+            isLoading,
+            error,
+            data
+        } = useQuery({ queryKey: ['products'], queryFn: getProducts })
+
+    if(isLoading) {
+        return (
+            <img src={spinner} alt="spinner" className='h-[100px] w-[100px] bg-transparent m-auto'/>
+        )
+    };
+    if(error) return "Error" + error.message;
+        
     const items = data.map((item) => {
         return(
             <div className='w-[250px] relative p-2 m-2 h-[300px] rounded-md bg-gray-300' key={item.id}>
